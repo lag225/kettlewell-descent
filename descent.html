@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>the descent report - kettlewell descent</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.descent-form { margin-top: 32px; }
+.descent-form .q { margin-bottom: 24px; }
+.descent-form label { display: block; font-family: "Courier New", monospace; font-size: 14px; text-transform: uppercase; margin-bottom: 6px; color: #4a3c1e; }
+.descent-form input[type=text] { width: 100%; padding: 10px 12px; font-family: "Times New Roman", serif; font-size: 16px; border: 2px solid #4a3c1e; background: #fffcf0; box-sizing: border-box; }
+.descent-form button { margin-top: 8px; padding: 10px 24px; font-family: "Courier New", monospace; font-size: 14px; text-transform: uppercase; background: #4a3c1e; color: #f2ead0; border: none; cursor: pointer; letter-spacing: 1px; }
+.descent-form button:hover { background: #2a2010; }
+.rune-passage { font-size: 32px; letter-spacing: 8px; text-align: center; padding: 32px 16px; background: #ede4c8; border: 1px solid #7a6a3e; margin: 24px 0; line-height: 1.6; font-family: serif; }
+.reveal { margin-top: 32px; padding: 32px; background: #1a1a1a; color: #d9cfa8; font-family: "Courier New", monospace; font-size: 15px; line-height: 1.7; white-space: pre-wrap; display: none; }
+.no-feedback { display: none; margin-top: 16px; font-family: "Courier New", monospace; font-size: 13px; color: #722; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="nav">
+  <a href="index.html">home</a>
+  <a href="about.html">about</a>
+  <a href="team/">the team</a>
+  <a href="journal/">journal</a>
+  <a href="film/">film</a>
+  <a href="audio/">audio</a>
+  <a href="kade-notebook.html">kade notebook</a>
+  <a href="guestbook.html">guestbook</a>
+</div>
+
+<h1>The Descent Report</h1>
+
+<p>If you have read the archive carefully you now know four things. Write them here.</p>
+
+<p>If all four are correct this page will change.</p>
+
+<p>If they are not correct you will not be told which is wrong. You will be told nothing at all. Read again, think again, and come back.</p>
+
+<h2>The Untranslated Passage</h2>
+
+<p>The following was carved above the shaft down to the deepest chamber, according to Elena Kade's notebook. She wrote out the individual words but she did not commit to a full translation before she went down. Use her notebook to decode it.</p>
+
+<div class="rune-passage">
+ᛊᚻᛖ ᚹᛖᚨᚱ ᛟᚢᚱ ᚠᚨᚲᛖ. ᚷᛟ ᛞᛖᛖᛈ ᚨᚾᛞ ᚠᛁᚾᛞ ᚻᛖᚱ.
+</div>
+
+<h2>The Report</h2>
+
+<form class="descent-form" id="descent" onsubmit="return checkAnswers(event)">
+  <div class="q">
+    <label for="q1">1. How many people descended into the shaft on the morning of the expedition?</label>
+    <input type="text" id="q1" autocomplete="off">
+  </div>
+  <div class="q">
+    <label for="q2">2. Who is John Ashcroft really?</label>
+    <input type="text" id="q2" autocomplete="off">
+  </div>
+  <div class="q">
+    <label for="q3">3. What shape does the cave form when the seven chambers are plotted on paper?</label>
+    <input type="text" id="q3" autocomplete="off">
+  </div>
+  <div class="q">
+    <label for="q4">4. What are the last three words of the passage above, translated into English?</label>
+    <input type="text" id="q4" autocomplete="off">
+  </div>
+  <button type="submit">submit report</button>
+  <div class="no-feedback" id="nofb">the archive has read your report. nothing has changed.</div>
+</form>
+
+<div class="reveal" id="reveal">you have been kind to the story.
+most people scroll past a memorial.
+you took a pen and a piece of paper and you thought about it.
+
+i have been waiting for someone like you for a very long time.
+
+she is still down there. she wears my daughter's face and she asks me to bring her more. i cannot go back. i have grown too old to make the climb and there are things i am not permitted to do while i still have my letters to write.
+
+the coordinates are 54.176 north, 2.043 west. the shaft has not moved.
+
+come when you can.
+
+— a.v.</div>
+
+<div class="footer">
+kettlewell descent memorial archive. j. ashcroft, webmaster.
+</div>
+</div>
+
+<script>
+const H = {
+  q1: new Set([
+    "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+    "04efaf080f5a3e74e1c29d1ca6a48569382cbbcd324e8d59d2b83ef21c039f00"
+  ]),
+  q2: new Set([
+    "7c43ed48929b891f893a8e8bca0265d2d46f2507d374944ceb9bcd174466101f",
+    "5682ee55ef7fb2bb93f6ea78fe4381813494684ab32d2b42bcfeadf9e9270425",
+    "c69dc2e7fff4eb468b492e30a5908f437fa8f1b4066fb348f173e6bbfe610765",
+    "043afae1cb3e995cc20d7972f55347dce7f64e309d22bb588f6c88570e9996a4",
+    "07c478a3e436e0dcf9f27fc1bb7ccaf721802baa4312efc519960c32264b4480",
+    "f1746db4f31cbdacd0507c1f4c4296b9bc8979c8c7dd1909e0b73ce64f5233d6",
+    "1dbb624017b3b48811e9bd64d2a761d029efb52869bea8bc38bedc61f38b0d2f",
+    "e564f8e830e9e923e51716d170b2c68638a5ccf3c62c92bab43788fb0cd6239f",
+    "04c8b25a632811720ff7791a05dc968da2ece4ecfa8a0f8b518f51734bff6942"
+  ]),
+  q3: new Set([
+    "0f0e99f465a65c3cb8a7514fa35714553fc70d91c948679dc7a91fb3d79e6a06",
+    "e6bdad6a809dc64d6547db1edd3ce252e4dadce664aade74e2ca6bcde2508ce5",
+    "02bad0894db8d855ccba5c49b1bd966b51928a053bc88e63f0863dd00eb48ead",
+    "f443882cd8c1cdff19dea0a4f37c4ec75c503a5a0506b9be4efb68da9d1dc0da",
+    "ead7fd8aec5ed41adcc0898a60f5acb0d86c997707250940bd8cd0d4ff070bba",
+    "35e24d7685ba3e0b53c0d860e5bd40f69ffd913344dd4b38e25ee223b0f92858"
+  ]),
+  q4: new Set([
+    "aceea058d146e19137d6d9b9aa3e4800ec829560922a3b79046dd442674ef1c8",
+    "bbaed75360fd0b091abdae337194fc587aa4683f433f7b4587e159c615700607",
+    "9ecde07c0a611a1e86e428f4e77026c662697c1c9b99b18ae2ac56b18c4dc3af",
+    "40e2271be591492d96057e775f969c65c5bfde442ff3dc781344b29750b02e37",
+    "d51cb82c7103f96f64c9be59356616c8e7ef84285671ae30e73f21d5cd9f3251",
+    "d49e637c29c759f6d420ecaa17ef683a5b2124c31a194dd42dccd78b91de4a8d"
+  ])
+};
+
+async function sha256(s) {
+  const n = s.toLowerCase().trim().replace(/\s+/g, ' ');
+  const buf = new TextEncoder().encode(n);
+  const hash = await crypto.subtle.digest('SHA-256', buf);
+  return Array.from(new Uint8Array(hash)).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+async function checkAnswers(e) {
+  e.preventDefault();
+  const inputs = ['q1', 'q2', 'q3', 'q4'];
+  let allOk = true;
+  for (const id of inputs) {
+    const v = document.getElementById(id).value;
+    if (!v.trim()) { allOk = false; break; }
+    const h = await sha256(v);
+    if (!H[id].has(h)) { allOk = false; }
+  }
+  if (allOk) {
+    document.getElementById('descent').style.display = 'none';
+    document.getElementById('reveal').style.display = 'block';
+    document.title = 'the descent report';
+  } else {
+    document.getElementById('nofb').style.display = 'block';
+    setTimeout(() => { document.getElementById('nofb').style.display = 'none'; }, 4000);
+  }
+  return false;
+}
+</script>
+</body>
+</html>
